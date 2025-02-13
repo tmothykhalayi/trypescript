@@ -1,7 +1,8 @@
-var character = 'Timothy';
+"use strict";
+const character = 'Timothy';
 console.log(character);
-var input = document.querySelectorAll('input');
+const input = document.querySelectorAll('input');
 console.log(input);
-input.forEach(function (input) {
+input.forEach(input => {
     console.log(input);
 });
