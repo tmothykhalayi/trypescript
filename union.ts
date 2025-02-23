@@ -33,6 +33,6 @@ console.log(e1);
 type Combinable = string | number;
 type Numeric = number | boolean;
 type Universal = Combinable & Numeric;
-const u: Universal = 1;
+//const u: Universal = 1;
 console.log(u);
 
