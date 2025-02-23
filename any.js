@@ -13,5 +13,5 @@ mixed.push(true);
 console.log(mixed);
 
 let timo;
-timo = { Name = Nandwa, age = 34 };
+//timo = { Name = Nandwa, age = 34 };
 console.log(timo);
