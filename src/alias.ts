@@ -8,3 +8,21 @@ function moveTo(location: Coordinates): void {
 
 // Using the alias
 moveTo([10, 20]);
+//aliases revision
+
+type stringOrNumber = string | number;
+
+type stringOrNumberArray = (string | number)[];
+
+type guitarist = {
+  name: string;
+  activestatus: boolean;
+  albums: [string, boolean][];  // Corrected to use a tuple with a colon
+};
+
+type userid =stringOrNumber
+//literal types
+let myname :'timothy'
+let username :'dave'|'timothy'|'khalayi'
+username ='any'
+

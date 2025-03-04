@@ -5,3 +5,7 @@ function moveTo(location) {
 }
 // Using the alias
 moveTo([10, 20]);
+//literal types
+let myname;
+let username;
+username = 'any';

@@ -14,3 +14,33 @@ const minus = (a, b) => {
     console.log(minus);
 };
 minus(10, 23);
+//functions
+const add = (a, b) => {
+    return a + b;
+};
+const logmsg = (message) => {
+    console.log(message);
+};
+logmsg('hello');
+logmsg(add(2, 3));
+let multiply = function (c, d) {
+    return c * d;
+};
+logmsg(multiply(3, 5));
+//rest parameters
+const total = (...nums) => {
+    return a + nums.reduce((prev, curr) => prev + curr);
+};
+logmsg(total(2, 3, 4));
+//never function
+const createerror = (errmsg) => {
+    throw new Error(errmsg);
+};
+const infinite = () => {
+    let i = 1;
+    while (true) {
+        i++;
+        if (i > 100)
+            break;
+    }
+};
