@@ -1,9 +1,10 @@
-var greet;
-greet = function (name, greeting) {
+"use strict";
+let greet;
+greet = (name, greeting) => {
     console.log('${name} says ${greeting}');
 };
-var calc;
-calc = function (numone, numtwo, action) {
+let calc;
+calc = (numone, numtwo, action) => {
     if (action === 'add') {
         return numone + numtwo;
     }
@@ -11,7 +12,7 @@ calc = function (numone, numtwo, action) {
         return numone - numtwo;
     }
 };
-var logdetails;
+let logdetails;
 log;
 details = (timo);
 {
