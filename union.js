@@ -1,3 +1,4 @@
+"use strict";
 //union and intersections in typescript
 //union
 function combine(input1, input2, resultConversion) {
@@ -8,17 +9,17 @@ function combine(input1, input2, resultConversion) {
         return input1.toString() + input2.toString();
     }
 }
-var combinedAges = combine(30, 26, 'as-number');
+const combinedAges = combine(30, 26, 'as-number');
 console.log(combinedAges);
-var combinedStringAges = combine('30', '26', 'as-number');
+const combinedStringAges = combine('30', '26', 'as-number');
 console.log(combinedStringAges);
-var combinedNames = combine('Max', 'Anna', 'as-text');
+const combinedNames = combine('Max', 'Anna', 'as-text');
 console.log(combinedNames);
-var e1 = {
+const e1 = {
     name: 'Max',
     privileges: ['create-server'],
     startDate: new Date()
 };
 console.log(e1);
-var u = 1;
+//const u: Universal = 1;
 console.log(u);
