@@ -18,3 +18,4 @@ Here are some of the key topics I’ve worked on:
 - **Type Inference and Type Checking**
 - **Decorators** (Experimental)
 - **Other Topics**: Namespaces, Type Assertions, Enums
+- OOP CONCEPTS
