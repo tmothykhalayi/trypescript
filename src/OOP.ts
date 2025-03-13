@@ -18,58 +18,87 @@
 // console.log(Person1.greet());
 
 // console.log(Person2.Age);
-// console.log(Person2.greet());
-class Bank{
-    constructor(protected balance:number=0){
-        this.balance =balance
+// // console.log(Person2.greet());
+// class Bank{
+
+//     constructor(protected balance:number=0){
+//         this.balance =balance
+//     }
+
+// }
+// class MpesaAccount extends Bank {
+//     constructor(balance: number = 0) {
+//         super(balance);
+//     }
+
+//     deposit(amount: number): void {
+//         this.balance += amount;
+//     }
+
+//     withdraw(amount: number): void {
+//         if (amount <= this.balance) {
+//             this.balance -= amount;
+//         } else {
+//             console.log('Insufficient balance');
+//         }
+//     }
+
+//     checkBalance(): number {
+//         return this.balance;
+//     }
+// }
+
+// const myMpesa = new MpesaAccount(100);
+// myMpesa.deposit(50);
+// console.log(myMpesa.checkBalance()); // 150
+// myMpesa.withdraw(30);
+// console.log(myMpesa.checkBalance()); // 120
+// myMpesa.withdraw(200); // Insufficient balance
+// class SavingAccount extends Bank {
+//     private interestRate: number;
+
+//     constructor(balance: number = 0, interestRate: number = 0.02) {
+//         super(balance);
+//         this.interestRate = interestRate;
+//     }
+
+//     addInterest(): void {
+//         this.balance += this.balance * this.interestRate;
+//     }
+
+//     checkBalance(): number {
+//         return this.balance;
+//     }
+// }
+
+// const mySaving = new SavingAccount(1000, 0.05);
+// mySaving.addInterest();
+// console.log(mySaving.checkBalance()); // 1050
+
+
+abstract class Shape {
+    color: string;
+
+    constructor(color: string) {
+        this.color = color;
     }
 
+    abstract area(): number;
+    abstract displaycolor(): void;
 }
-class MpesaAccount extends Bank {
-    constructor(balance: number = 0) {
-        super(balance);
+class Circle extends Shape {
+    radius: number;
+
+    constructor(color: string, radius: number) {
+        super(color);
+        this.radius = radius;
     }
 
-    deposit(amount: number): void {
-        this.balance += amount;
+    area(): number {
+        return Math.PI * this.radius * this.radius;
     }
 
-    withdraw(amount: number): void {
-        if (amount <= this.balance) {
-            this.balance -= amount;
-        } else {
-            console.log('Insufficient balance');
-        }
-    }
-
-    checkBalance(): number {
-        return this.balance;
+    displaycolor(): void {
+        console.log(`The color of the circle is ${this.color}`);
     }
 }
-
-const myMpesa = new MpesaAccount(100);
-myMpesa.deposit(50);
-console.log(myMpesa.checkBalance()); // 150
-myMpesa.withdraw(30);
-console.log(myMpesa.checkBalance()); // 120
-myMpesa.withdraw(200); // Insufficient balance
-class SavingAccount extends Bank {
-    private interestRate: number;
-
-    constructor(balance: number = 0, interestRate: number = 0.02) {
-        super(balance);
-        this.interestRate = interestRate;
-    }
-
-    addInterest(): void {
-        this.balance += this.balance * this.interestRate;
-    }
-
-    checkBalance(): number {
-        return this.balance;
-    }
-}
-
-const mySaving = new SavingAccount(1000, 0.05);
-mySaving.addInterest();
-console.log(mySaving.checkBalance()); // 1050
