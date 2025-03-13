@@ -53,3 +53,23 @@ console.log(myMpesa.checkBalance()); // 150
 myMpesa.withdraw(30);
 console.log(myMpesa.checkBalance()); // 120
 myMpesa.withdraw(200); // Insufficient balance
+class SavingAccount extends Bank {
+    private interestRate: number;
+
+    constructor(balance: number = 0, interestRate: number = 0.02) {
+        super(balance);
+        this.interestRate = interestRate;
+    }
+
+    addInterest(): void {
+        this.balance += this.balance * this.interestRate;
+    }
+
+    checkBalance(): number {
+        return this.balance;
+    }
+}
+
+const mySaving = new SavingAccount(1000, 0.05);
+mySaving.addInterest();
+console.log(mySaving.checkBalance()); // 1050
