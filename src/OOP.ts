@@ -1,6 +1,6 @@
 class Person{
-    name:string = '';
-    Age:number = 0;
+   public name:string = '';
+    public Age:number = 0;
     constructor(_name:string ,_Age:number ){
         this.Age =_Age;
         this.name =_name;
